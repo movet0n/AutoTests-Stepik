@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.options import Options
 
 def pytest_addoption(parser):
 
-    # it is not necessary to parser different drivers in this step
     parser.addoption("--driver_name",
                      action="store",
                      default="chrome",
@@ -29,7 +28,6 @@ def driver(request):
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
         driver = webdriver.Chrome(options=options)
 
-    # this selection may be omitted, since it clarified that only Chrome browser should be checked
     elif driver_name == "firefox":
         print("\n--- start firefox driver for test---")
         fp = webdriver.FirefoxProfile()
