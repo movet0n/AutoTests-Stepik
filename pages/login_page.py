@@ -13,10 +13,10 @@ class LoginPage(BasePage):
         assert "/login" in self.driver.current_url
 
     def should_be_login_form(self):
-        assert self.is_element_present(*LoginPageLocators.LOGIN_EMAIL)
-        assert self.is_element_present(*LoginPageLocators.LOGIN_PASSWORD)
+        assert self.is_element_present(*LoginPageLocators.LOGIN_EMAIL), "'login email' field is not presented"
+        assert self.is_element_present(*LoginPageLocators.LOGIN_PASSWORD), "'login password' field is not presented"
 
     def should_be_register_form(self):
-        assert self.is_element_present(*LoginPageLocators.REG_EMAIL)
-        assert self.is_element_present(*LoginPageLocators.REG_PASSWORD)
-        assert self.is_element_present(*LoginPageLocators.REG_PASSWORD_2)
+        assert self.is_element_present(*LoginPageLocators.REG_EMAIL), "'reg email' field is not presented"
+        assert self.is_element_present(*LoginPageLocators.REG_PASSWORD_1), "'reg password' field is not presented"
+        assert self.is_element_present(*LoginPageLocators.REG_PASSWORD_2), "'reg confirm password' field is not presented"
