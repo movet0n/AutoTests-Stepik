@@ -3,6 +3,6 @@ pytest==5.3.5
 python-apt==1.6.5+ubuntu0.2
 python-dateutil==2.8.1
 python-debian==0
-requests==2.18.4
+requests==2.20.0
 selenium==3.141.0
 virtualenv==16.7.5
