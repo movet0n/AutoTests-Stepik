@@ -46,7 +46,7 @@ class ProductPage(BasePage):
         print(book_title, book_title_success)
         assert book_title == book_title_success, f"{book_title} is not similar to the {book_title_success}"
 
-    def verify_success_message(self):
+    def verify_success_message_is_present(self):
         success_text = "has been added to your basket"
         print(success_text)
         assert success_text in self.driver.page_source, f"'{success_text}' text has not been found in the source page"
@@ -56,3 +56,9 @@ class ProductPage(BasePage):
         book_price_navbar = self.driver.find_element(*ProductPageLocators.BOOK_PRICE_NAVBAR).text
         print(book_price, book_price_navbar)
         assert book_price == book_price_navbar, f"{book_price} is not similar to the {book_price_navbar}"
+
+    def verify_success_message_is_not_present(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "success message should not be present"
+
+    def verify_success_message_is_not_present_with_disappear_function(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "looks like success message should not be present?"
