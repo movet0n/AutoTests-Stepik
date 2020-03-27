@@ -6,3 +6,4 @@ Link to the Stepik free online course - https://stepik.org/course/575/syllabus
 DISCREPANCIES:
 
 1. Used "driver" instead of "browser".
+2. Used "basket" instead of "cart" as indicated in CSS locators.
