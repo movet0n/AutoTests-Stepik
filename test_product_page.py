@@ -42,7 +42,8 @@ class TestUserAddToBasketFromProductPage:
 
 
 @pytest.mark.need_review
-def test_guest_can_add_product_to_basket(driver, link):
+def test_guest_can_add_product_to_basket(driver):
+    link = ProductPageLocators.PRODUCT_LINK_PROMO
     page = ProductPage(driver, link)
     page.open()
     page.is_present_add_to_basket_button()
