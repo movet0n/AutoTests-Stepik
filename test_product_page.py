@@ -20,9 +20,6 @@ class TestUserAddToBasketFromProductPage:
         login_page = LoginPage(driver, url=driver.current_url)
         login_page.register_new_user(LoginPageLocators.REG_EMAIL, LoginPageLocators.REG_PASSWORD)
 
-        print(LoginPageLocators.REG_EMAIL)
-        time.sleep(3)
-
         login_page.should_be_authorized_user()
 
     def test_user_cant_see_success_message(self, driver):
@@ -87,7 +84,6 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(driver):
     basket_page.verify_basket_is_empty()
 
 
-@pytest.mark.need_review
 def test_guest_should_see_login_link_on_product_page(driver):
     link = ProductPageLocators.THE_CITY_AND_THE_STARS_LINK
     page = ProductPage(driver, link)
