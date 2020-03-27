@@ -42,6 +42,7 @@ class ProductPageLocators:
 
     # links
     PRODUCT_LINK = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
+    PRODUCT_LINK_PROMO = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"
     THE_CITY_AND_THE_STARS_LINK = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
 
     # selectors
